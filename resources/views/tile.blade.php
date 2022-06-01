@@ -27,6 +27,10 @@
                 <div class="font-small text-xs text-center">{{ $brokenLinks }}</div>
                 <div class="font-small text-xs text-center">Broken</div>
             </div>
+            <div class="flex flex-col w-1/3">
+                <div class="font-small text-xs text-center">{{ $notSure }}</div>
+                <div class="font-small text-xs text-center">Other</div>
+            </div>
         </div>
 
         <div class="h-56 flex mt-3">

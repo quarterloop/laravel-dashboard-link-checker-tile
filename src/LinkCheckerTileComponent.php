@@ -29,6 +29,10 @@ class LinkCheckerTileComponent extends Component
                                 return $element['status']==404;
                               }));
 
+      $countOther  = count(array_filter($linkCheckerStore->getData()['data'], function($element) {
+                                return $element['status']!=200 && $element['status']!=404;
+                              }));
+
       $countAll = count($linkCheckerStore->getData()['data']);
 
 
@@ -40,6 +44,7 @@ class LinkCheckerTileComponent extends Component
             // 'links'           => $linkCheckerStore->getData()['data'],
             'workingLinks'    => $count200,
             'brokenLinks'     => $count404,
+            'notSure'         => $countOther,
             'checkedLinks'    => $countAll,
             'lastUpdateTime'  => date('H:i:s', strtotime($linkCheckerStore->getLastUpdateTime())),
             'lastUpdateDate'  => date('d.m.Y', strtotime($linkCheckerStore->getLastUpdateDate())),
