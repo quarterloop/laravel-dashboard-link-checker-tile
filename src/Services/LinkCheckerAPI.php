@@ -10,9 +10,9 @@ class LinkCheckerAPI
   {
 
       $response = Http::withHeaders([
-        'x-api-key' => {$key},
+        'x-api-key' => $key,
       ])->post('https://api.geekflare.com/brokenlink', [
-        'url' => {$url},
+        'url' => $url,
       ])->json();
 
       return $response;
