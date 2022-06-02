@@ -19,7 +19,7 @@ class FetchLinkCheckerCommand extends Command
 
         $brokenLinks = $link_checker_api::getBrokenLinks(
             config('dashboard.tiles.hosting.url'),
-            config('dashboard.tiles.linkChecker.key'),
+            config('dashboard.tiles.geekflare.key'),
         );
 
         LinkCheckerStore::make()->setData($brokenLinks);
