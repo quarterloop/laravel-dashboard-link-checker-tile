@@ -8,28 +8,27 @@
         </a>
 
         <h1 class="font-medium text-dimmed text-sm uppercase tracking-wide tabular-nums text-center">Link Check</h1>
-        <p class="font-small text-dimmed text-xs lowercase tracking-wide tabular-nums text-center pb-2">{{ $website }}</p>
-        <p class="text-dimmed lowercase tracking-wide tabular-nums text-center mr-auto ml-auto mb-5 w-full"
+        <p class="text-dimmed lowercase tracking-wide tabular-nums text-center mr-auto ml-auto mb-3 w-full"
            style="font-size: 12px;">
            {{ $lastUpdateDate }} - {{ $lastUpdateTime }}
         </p>
 
         <div class="flex flex-row justify-between">
-            <div class="flex flex-col w-1/3">
+            <div class="flex flex-col w-1/3 border border-gray-700 border-dimmded rounded pt-3 pb-3 bg-gray-700 m-1">
                 <div class="font-small text-xs text-center">{{ $checkedLinks }}</div>
-                <div class="font-small text-xs text-center">Checked Links</div>
+                <div class="font-small text-xs text-center">All</div>
             </div>
-            <div class="flex flex-col w-1/3">
+            <div class="flex flex-col w-1/3 border border-gray-700 border-dimmded rounded pt-3 pb-3 bg-green-700 m-1">
                 <div class="font-small text-xs text-center">{{ $workingLinks }}</div>
                 <div class="font-small text-xs text-center">Working</div>
             </div>
-            <div class="flex flex-col w-1/3">
-                <div class="font-small text-xs text-center">{{ $brokenLinks }}</div>
-                <div class="font-small text-xs text-center">Broken</div>
-            </div>
-            <div class="flex flex-col w-1/3">
+            <div class="flex flex-col w-1/3 border border-gray-700 border-dimmded rounded pt-3 pb-3 bg-yellow-700 m-1">
                 <div class="font-small text-xs text-center">{{ $notSure }}</div>
                 <div class="font-small text-xs text-center">Other</div>
+            </div>
+            <div class="flex flex-col w-1/3 border border-gray-700 border-dimmded rounded pt-3 pb-3 bg-red-700 m-1">
+                <div class="font-small text-xs text-center">{{ $brokenLinks }}</div>
+                <div class="font-small text-xs text-center">Broken</div>
             </div>
         </div>
 
