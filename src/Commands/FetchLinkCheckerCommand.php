@@ -5,6 +5,7 @@ namespace Quarterloop\LinkCheckerTile\Commands;
 use Illuminate\Console\Command;
 use Quarterloop\LinkCheckerTile\Services\LinkCheckerAPI;
 use Quarterloop\LinkCheckerTile\LinkCheckerStore;
+use Session;
 
 class FetchLinkCheckerCommand extends Command
 {
@@ -18,7 +19,7 @@ class FetchLinkCheckerCommand extends Command
         $this->info('Fetching link checker data ...');
 
         $brokenLinks = $link_checker_api::getBrokenLinks(
-            config('dashboard.tiles.hosting.url'),
+            Session::get('website'),
             config('dashboard.tiles.geekflare.key'),
         );
 
