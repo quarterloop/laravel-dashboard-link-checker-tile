@@ -23,5 +23,6 @@ class LinkCheckerTileServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-link-checker-tile');
 
         Livewire::component('link-checker-tile', LinkCheckerTileComponent::class);
+        Livewire::component('link-checker-small-tile', LinkCheckerSmallTileComponent::class);
     }
 }
