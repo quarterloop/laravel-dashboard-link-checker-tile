@@ -5,7 +5,7 @@ namespace Quarterloop\LinkCheckerTile;
 use Livewire\Component;
 use Illuminate\Support\DB;
 
-class LinkCheckerTileComponent extends Component
+class LinkCheckerSmallTileComponent extends Component
 {
 
     public $position;
@@ -36,7 +36,7 @@ class LinkCheckerTileComponent extends Component
       $countAll = count($linkCheckerStore->getData()['data']);
 
 
-        return view('dashboard-link-checker-tile::tile', [
+        return view('dashboard-link-checker-tile::tile-small', [
             'website'         => config('dashboard.tiles.hosting.url'),
             'links'           => array_filter($linkCheckerStore->getData()['data'], function($element) {
                                       return $element['status'] == 404;
